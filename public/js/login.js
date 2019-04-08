@@ -22,3 +22,7 @@ $('form').form({
     onSuccess: function(e) {
     }
 });
+
+$('.ui.checkbox')
+    .checkbox()
+;
