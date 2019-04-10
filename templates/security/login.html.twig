@@ -3,37 +3,45 @@
 {% block title %}Sign in!{% endblock %}
 
 {% block body %}
-    <form class="ui form segment" method="post">
-        {% if error %}
-            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
+    <div class="ui centered grid container">
+        <div class="nine wide column">
+            <h1 class="ui center aligned icon header">
+                <i class="circular users icon"></i>
+                Login
+            </h1>
+            <div class="ui fluid card">
+                <div class="content">
+                    <form class="ui form" method="post">
+                        {% if error %}
+                            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
 
-        <h1 class="ui block center aligned header">Please sign in</h1>
-
-        <div class="two fields">
-            <div class="required field">
-                <label>Email</label>
-                <input type="text" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Email" required autofocus>
-            </div>
-            <div class="required field">
-                <label>Password</label>
-                <input type="password" name="password" id="inputPassword" placeholder="Password" required>
+                        <div class="required field">
+                            <label>Email</label>
+                            <input type="text" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Email" required autofocus>
+                        </div>
+                        <div class="required field">
+                            <label>Password</label>
+                            <input type="password" name="password" id="inputPassword" placeholder="Password" required>
+                        </div>
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" tabindex="0" class="hidden" name="_remember_me">
+                                <label>Remember me</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button class="ui green submit button" type="submit">
+                                Sign in
+                            </button>
+                        </div>
+                        <div class="ui error message"></div>
+                    </form>
+                </div>
             </div>
         </div>
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-        <div class="field">
-            <div class="ui checkbox">
-                <input type="checkbox" tabindex="0" class="hidden" name="_remember_me">
-                <label>Remember me</label>
-            </div>
-        </div>
-        <div class="field">
-            <button class="ui green submit button" type="submit">
-                Sign in
-            </button>
-        </div>
-        <div class="ui error message"></div>
-    </form>
+    </div>
 {% endblock %}
 
 {% block javascripts %}

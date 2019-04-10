@@ -1,15 +1,19 @@
 $('form').form({
     fields: {
-        firstName: {
+        email: {
             identifier: 'email',
             rules: [
+                {
+                    type: 'empty',
+                    prompt: 'Empty email'
+                },
                 {
                     type: 'email',
                     prompt: 'Invalid email address'
                 }
             ]
         },
-        email: {
+        password: {
             identifier: 'password',
             rules: [
                 {
