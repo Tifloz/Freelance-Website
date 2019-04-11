@@ -1,6 +1,20 @@
-.ui.centered.header{
+.ui.centered.header {
     margin-top: 0em;
 }
-#skills{
+
+#skills {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#skills .column .ui.tiny.images {
     text-align: center;
+}
+
+#skills .borders.column {
+    border-right: 3px green;
+    border-left: 3px red;
+    border-bottom: 0;
+    border-top: 0;
+    border-style: solid;
 }
