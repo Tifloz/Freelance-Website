@@ -2,6 +2,7 @@
   "name": "Freelance-Website",
   "version": "1.0.0",
   "dependencies": {
+    "@glidejs/glide": "^3.2.7",
     "gulp": "^4.0.0",
     "gulp-util": "^3.0.8"
   }

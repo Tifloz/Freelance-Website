@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/about-me/about-me.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="ui segments">
+        <div class="ui placeholder segment">
+            <h2 class="ui centered header">
+                <img class="ui image" src="{{ asset('images/me.png') }}" alt="Me">
+                <div class="content">
+                    About Me
+                </div>
+            </h2>
+        </div>
+        <div class="ui secondary segment">
+            <h2 class="ui centered header">
+                <img class="ui image" src="{{ asset('images/skills.png') }}" alt="My skills">
+                <div class="content">
+                    My skills
+                </div>
+            </h2>
+            <div id="skills" class="ui tiny images">
+                <img class="ui image" data-position="top center" data-content="HTML 5" src="{{ asset('images/html.svg') }}">
+                <img class="ui image" data-position="top center" data-content="CSS 3" src="{{ asset('images/css.svg') }}">
+                <img class="ui image" src="{{ asset('images/html.svg') }}">
+                <img class="ui image" src="{{ asset('images/html.svg') }}">
+                <img class="ui image" src="{{ asset('images/html.svg') }}">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/about-me/about-me.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,3 @@
+$('#skills img')
+    .popup()
+;
