@@ -5,26 +5,26 @@ $('form').form({
             rules: [
                 {
                     type: 'empty',
-                    prompt: 'Empty email'
+                    prompt: 'Empty email',
                 },
                 {
                     type: 'email',
-                    prompt: 'Invalid email address'
-                }
-            ]
+                    prompt: 'Invalid email address',
+                },
+            ],
         },
         password: {
             identifier: 'password',
             rules: [
                 {
                     type: 'empty',
-                    prompt: 'Invalid password'
-                }
-            ]
-        }
+                    prompt: 'Invalid password',
+                },
+            ],
+        },
     },
-    onSuccess: function(e) {
-    }
+    onSuccess: function (e) {
+    },
 });
 
 $('.ui.checkbox')
