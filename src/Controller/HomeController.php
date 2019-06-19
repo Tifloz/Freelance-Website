@@ -32,4 +32,17 @@ class HomeController extends AbstractController
             ]
         );
     }
+
+    /**
+     * @Route("/contact-me", name="contact-me")
+     */
+    public function contact()
+    {
+        return $this->render(
+            'contact/contact.html.twig',
+            [
+                'ws_url' => 'localhost:8080',
+            ]
+        );
+    }
 }

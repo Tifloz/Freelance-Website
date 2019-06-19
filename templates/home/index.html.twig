@@ -1,10 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+{% endblock %}
 
 {% block body %}
 
-<div class="ui grid">
-
+<div class="ui center aligned padded text grid">
+    <div class="ui huge header">Website Freelance</div>
 </div>
 {% endblock %}

@@ -11,11 +11,11 @@
 <body>
 <div class="ui stackable menu">
     <div id="nav_logo" data-url="{{ path('home') }}" class="item">
-        <img src="/images/logo.png" alt="Tiflo">
+        <img src="/images/logo.png" alt="LOGO">
     </div>
     <a class="item" href="{{ path('home') }}">Home</a>
     <a class="item" href="{{ path('about-me') }}">About me</a>
-    <a class="item">Services</a>
+    <a class="item" href="{{ path('contact-me') }}">Contact</a>
     <div class="right menu">
         {% if not app.user %}
             <div class="item">
@@ -32,9 +32,9 @@
     </div>
 </div>
 {% block body %}{% endblock %}
-    <script src="{{ asset('lib/jquery-3.3.1.min.js') }}"></script>
-    <script src="{{ asset('lib/semantic/semantic.min.js') }}"></script>
-    <script src="{{ asset('js/base/base.js') }}"></script>
+<script src="{{ asset('lib/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('lib/semantic/semantic.min.js') }}"></script>
+<script src="{{ asset('js/base/base.js') }}"></script>
 {% block javascripts %}{% endblock %}
 </body>
 </html>
